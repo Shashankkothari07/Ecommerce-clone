@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png">
+    <title>Welcome To Flipkart Clone</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilis.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="https://www.flipkart.com/"><img src="logo.png" alt=""></a>
+            </div>
+            <ul>
+                <li><a href="https://www.flipkart.com/">Home</a></li>
+                <li><a href="https://www.flipkart.com/about-us?otracker=undefined_footer_navlinks">About</a></li>
+                <li><a href="https://www.flipkart.com/helpcentre?otracker=undefined_footer_navlinks">Contact</a></li>
+            </ul>
+            <div class="search" style="margin-left: 100px;">
+                <input type="text" placeholder="Search Here">
+                <button class="btn"><a href="https://www.flipkart.com/" >Search</a></button>
+            </div>
+            <div style="margin-left: 100px" style="color: white;">
+             
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+              <button  type="button" id="popcart" class="btn btn-secondary mx-3" data-html="true"  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Cart">
+              Your Cart <span id="cart" style="width: 30px;">0</span>
+              
+                
+            </button>
+            <button  type="button" onclick="del()" id="popcart" class="btn btn-secondary mx-3" data-html="true"  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Cart">
+                Clear your Cart
+                
+                  
+              </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="slider">
+                <a href="https://www.flipkart.com/"><img src="img/pop.jpg" alt="Error" style="padding-right:20px ;margin-left: 20px;"></a>
+                <div style="margin-left: 0px;">
+                    <img src="img/sale.webp" alt="sale" style="width: 250px;height: 150px;background-color: aqua;">
+                    <div style="display: flex;">
+                        <img src="img/tree.jpg" alt="tree">
+                        <h1 id="time">Days left for christmas </h1>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h2 class="my-2">Furniture Bestsellers</h2>
+
+                      <div class="card-item">
+                            <img src="img/f1.jpeg" alt="Error" width="135" height="150">
+                            <div class="lines">
+                                <p class="text-center my-1 t">Home Temples</p>
+                                <p class="text-center my-1 m">From &#8377;399</p>
+                                <p class="text-center my-1 b">Trendy Collection</p>
+                            </div>
+                            <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                            
+                        </div>
+                        
+                    
+
+                      <div class="card-item">
+                            <img src="img/f2.jpeg" alt="Error" width="112" height="150">
+                            <div class="lines">
+                                <p class="text-center my-1 t">Oudoor Chairs</p>
+                                <p class="text-center my-1 m">From &#8377;479</p>
+                                <p class="text-center my-1 b">Nilkamal, Avro</p>
+                            </div>
+                            <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                        </div>
+                   
+
+                      <div class="card-item">
+                            <img src="img/f3.jpeg" alt="Error" width="150" height="142">
+                            <div class="lines">
+                                <p class="text-center my-1 t">Sofa Sets</p>
+                                <p class="text-center my-1 m">Minimum 30% Off</p>
+                                <p class="text-center my-1 b">Fabric & Leatherette</p>
+                            </div>
+                            <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                        </div>
+                   
+
+                      <div class="card-item">
+                            <img src="img/f4.jpeg" alt="Error" width="112" height="150">
+                            <div class="lines">
+                                <p class="text-center my-1 t">Cabinet & Drawers</p>
+                                <p class="text-center my-1 m">From &#8377;199</p>
+                                <p class="text-center my-1 b">New Collection</p>
+                            </div>
+                            <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                        </div>
+                   
+
+                      <div class="card-item">
+                            <img src="img/f5.jpeg" alt="Error" width="150" height="150">
+                            <div class="lines">
+                                <p class="text-center my-1 t">Top TV Units</p>
+                                <p class="text-center my-1 m">From &#8377;4,499</p>
+                                <p class="text-center my-1 b">Home Towns, Perfect Homes</p>
+                            </div>
+                            <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                        </div>
+                   
+
+                      <div class="card-item">
+                            <img src="img/f6.jpeg" alt="Error" width="150" height="150">
+                            <div class="lines">
+                                <p class="text-center my-1 t">Hammock & Swings</p>
+                                <p class="text-center my-1 m">From &#8377;199</p>
+                                <p class="text-center my-1 b">Trendy Collection</p>
+                            </div>
+                            <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                        </div>
+                   
+
+                </div>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h2 class="my-2">Top Fashion Styles</h2>
+
+                           <div class="card-item">
+                                <img src="img/t1.jpeg" alt="Error" width="84" height="150">
+                                <div class="lines">
+                                    <p class="text-center my-1 t">Premimum Suitcases</p>
+                                    <p class="text-center my-1 m">Flat 40% Off</p>
+                                    <p class="text-center my-1 b">Calvin Klein, Skybags</p>
+                                </div>
+                                <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                            </div>
+                       
+
+                           <div class="card-item">
+                                <img src="img/t2.jpeg" alt="Error" width="95" height="150">
+                                <div class="lines">
+                                    <p class="text-center my-1 t">Trendy Backpacks</p>
+                                    <p class="text-center my-1 m">From &#8377;199</p>
+                                    <p class="text-center my-1 b">Safari, Skybags</p>
+                                </div>
+                                <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                            </div>
+                       
+
+                           <div class="card-item">
+                                <img src="img/t3.jpeg" alt="Error" width="150" height="92">
+                                <div class="lines">
+                                    <p class="text-center my-1 t">Watches</p>
+                                    <p class="text-center my-1 m">Min 80% Off</p>
+                                    <p class="text-center my-1 b">Grab Now!</p>
+                                </div>
+                                <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                            </div>
+                       
+
+                           <div class="card-item">
+                                <img src="img/t4.jpeg" alt="Error" width="150" height="149">
+                                <div class="lines">
+                                    <p class="text-center my-1 t">Jewellery Set</p>
+                                    <p class="text-center my-1 m">Min. 70% Off</p>
+                                    <p class="text-center my-1 b">Sukkhi, Vatsalya Creation</p>
+                                </div>
+                                <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                            </div>
+                       
+
+                           <div class="card-item">
+                                <img src="img/t5.jpeg" alt="Error" width="91" height="150">
+                                <div class="lines">
+                                    <p class="text-center my-1 t">Gowns</p>
+                                    <p class="text-center my-1 m">Min 70% Off</p>
+                                    <p class="text-center my-1 b">Embroidered, Ethnic Sets</p>
+                                </div>
+                                <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                            </div>
+                       
+
+                           <div class="card-item">
+                                <img src="img/t6.jpeg" alt="Error" width="61" height="150">
+                                <div class="lines">
+                                    <p class="text-center my-1 t">Proper Cargos</p>
+                                    <p class="text-center my-1 m">From &#8377;599</p>
+                                    <p class="text-center my-1 b">Best Collection</p>
+                                </div>
+                                <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                            </div>
+                       
+
+                    </div>
+
+                    <div class="cards">
+
+                        <div class="card">
+                            <h2 class="my-2">Headphones & Speakers</h2>
+
+                                <div class="card-item">
+                                    <img src="img/h1.jpeg" alt="Error" width="150" height="70">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Home Audio Speakers</p>
+                                        <p class="text-center my-1 m">Upto 60% Off</p>
+                                        <p class="text-center my-1 b">boAt, F&D more</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                           
+
+                                <div class="card-item">
+                                    <img src="img/h2.jpeg" alt="Error" width="150" height="118">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Two Wireless Earphones</p>
+                                        <p class="text-center my-1 m">From &#8377;1999</p>
+                                        <p class="text-center my-1 b">boAt, JBL, realme & more</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                           
+
+                                <div class="card-item">
+                                    <img src="img/h3.jpeg" alt="Error" width="112" height="150">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Blutooth Speakers</p>
+                                        <p class="text-center my-1 m">Explore More</p>
+                                        <p class="text-center my-1 b">New Launches</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                           
+
+                                <div class="card-item">
+                                    <img src="img/h4.jpeg" alt="Error" width="150" height="147">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Headphones</p>
+                                        <p class="text-center my-1 m">Explore More</p>
+                                        <p class="text-center my-1 b">New Launches</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                           
+
+                                <div class="card-item">
+                                    <img src="img/h5.jpeg" alt="Error" width="150" height="132">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Truewireless Earbuds</p>
+                                        <p class="text-center my-1 m">Explore Now</p>
+                                        <p class="text-center my-1 b">New Launches</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                           
+
+                                <div class="card-item">
+                                    <img src="img/h6.jpeg" alt="Error" width="137" height="150">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Bluetooth Headphones</p>
+                                        <p class="text-center my-1 m">From &#8377;899</p>
+                                        <p class="text-center my-1 b">JBL, boAt & more</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                           
+
+                        </div>
+
+                        <div class="cards">
+
+                            <div class="card carousel-inner">
+                                <h2 class="my-2">Best of Electronics</h2>
+<div class="carousel-item active">
+                                <div class="card-item">
+                                    <img src="img/e1.jpeg" alt="Error" width="150" height="128">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Lenovo Ideapad</p>
+                                        <p class="text-center my-1 m">Starting From &#8377;22,900</p>
+                                        <p class="text-center my-1 b">Keyboard | 25.65cm</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                               
+
+                                <div class="card-item">
+                                    <img src="img/e2.jpeg" alt="Error" width="147" height="150">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Best Of Steamer Vaporiser</p>
+                                        <p class="text-center my-1 m">Best Seller</p>
+                                        <p class="text-center my-1 b">By Dr. Trust</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                               
+
+                                <div class="card-item">
+                                    <img src="img/e3.jpeg" alt="Error" width="150" height="119">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">TV Streaming Devices</p>
+                                        <p class="text-center my-1 m">From &#8377;2,799</p>
+                                        <p class="text-center my-1 b">Make Your TV Smart</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                               
+
+                                <div class="card-item">
+                                    <img src="img/e4.jpeg" alt="Error" width="68" height="150">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Electric Toothbrush</p>
+                                        <p class="text-center my-1 m">From &#8377;599</p>
+                                        <p class="text-center my-1 b">By Oral-B, Colgate, JSB</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                               
+
+                                <div class="card-item">
+                                    <img src="img/e5.jpeg" alt="Error" width="150" height="104">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Best Of Health Care Devices</p>
+                                        <p class="text-center my-1 m">From &#8377;149</p>
+                                        <p class="text-center my-1 b">BP Monitors,Nebulizers</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                               
+   </div>
+   <div class="carousel-item">
+                                <div class="card-item">
+                                    <img src="img/e6.jpeg" alt="Error" width="91" height="150">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Alcatel 3T10 With Speaker</p>
+                                        <p class="text-center my-1 m">From &#8377;9,999</p>
+                                        <p class="text-center my-1 b">Grab Now!</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                               
+
+                                <div class="card-item">
+                                    <img src="img/e7.jpeg" alt="Error" width="58" height="150">
+                                    <div class="lines">
+                                        <p class="text-center my-1 t">Samsung Refrigerators</p>
+                                        <p class="text-center my-1 m">Just &#8377;10,990</p>
+                                        <p class="text-center my-1 b">Top Brand</p>
+                                    </div>
+                                    <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                </div>
+                               
+
+                            </div>
+</div>
+                            <div class="cards">
+
+                                <div class="card">
+                                    <h2 class="my-2">Winter Essentials</h2>
+
+                                     <div class="card-item">
+                                        <img src="img/w1.jpeg" alt="Error" width="105" height="150">
+                                        <div class="lines">
+                                            <p class="text-center my-1 t">Immersion Rods</p>
+                                            <p class="text-center my-1 m">Min. 50% Off</p>
+                                            <p class="text-center my-1 b">Grab Now!</p>
+                                        </div>
+                                        <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                    </div>
+                                   
+
+                                     <div class="card-item">
+                                        <img src="img/w4.jpeg" alt="Error" width="88" height="150">
+                                        <div class="lines">
+                                            <p class="text-center my-1 t">Men's Sweatshirts</p>
+                                            <p class="text-center my-1 m">Min 70% Off</p>
+                                            <p class="text-center my-1 b">Hurry, Don't Miss Out!</p>
+                                        </div>
+                                        <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                    </div>
+                                   
+
+                                     <div class="card-item">
+                                        <img src="img/w2.jpeg" alt="Error" width="150" height="150">
+                                        <div class="lines">
+                                            <p class="text-center my-1 t">Blankets</p>
+                                            <p class="text-center my-1 m">Min 70% Off</p>
+                                            <p class="text-center my-1 b">Discover Now!</p>
+                                        </div>
+                                        <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                    </div>
+                                   
+
+                                     <div class="card-item">
+                                        <img src="img/w3.jpeg" alt="Error" width="150" height="87">
+                                        <div class="lines">
+                                            <p class="text-center my-1 t">Women's Arm Warmers</p>
+                                            <p class="text-center my-1 m">Min 40% Off</p>
+                                            <p class="text-center my-1 b">Great Savings!</p>
+                                        </div>
+                                        <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                    </div>
+                                   
+
+                                     <div class="card-item">
+                                        <img src="img/w6.jpeg" alt="Error" width="125" height="150">
+                                        <div class="lines">
+                                            <p class="text-center my-1 t">Kid's Tracksuits</p>
+                                            <p class="text-center my-1 m">Min 50% Off</p>
+                                            <p class="text-center my-1 b">Buy Now!</p>
+                                        </div>
+                                        <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                    </div>
+                                   
+
+                                     <div class="card-item">
+                                        <img src="img/w5.jpeg" alt="Error" width="150" height="145">
+                                        <div class="lines">
+                                            <p class="text-center my-1 t">Men's Mufflers</p>
+                                            <p class="text-center my-1 m">Min 60% Off</p>
+                                            <p class="text-center my-1 b">Grab Now!</p>
+                                        </div>
+                                        <button class="btn-primary dark checkonadd" onclick="add()">Add to cart</button>
+                                    </div>
+                                   
+                                </div>
+
+                            </div>
+                        </div>
+    </main>
+    <br>
+    <br>
+
+    <footer class="flex-allcenter">
+        <p>Copyright &copy; FlipkartClone.com</p>
+    </footer>
+<script>
+    function add(){
+        var cart=document.getElementById("cart").innerHTML;
+        cart++;
+        document.getElementById("cart").innerHTML=cart;
+  alert("You have successfully added the item to your cart "+cart+" are the total items in your cart")
+    }
+   
+function del()
+{
+    document.getElementById("cart").innerHTML="0";
+}
+
+    let today = new Date();
+      
+      
+      let christmasYear = today.getFullYear();
+        
+      
+      if (today.getMonth() == 11 &&
+          today.getDate() > 25) {
+        
+   
+        christmasYear = christmasYear + 1;
+      }
+        
+      
+      let christmasDate = 
+          new Date(christmasYear, 11, 25);
+        
+      
+      let dayMilliseconds =
+          1000 * 60 * 60 * 24;
+        
+      
+      let remainingDays = Math.ceil(
+        (christmasDate.getTime() - today.getTime()) /
+        (dayMilliseconds)
+      );
+    document.getElementById("time").innerHTML="Time left for christmas sale="+remainingDays+"days";
+
+</script>
+</body>
+</html>
